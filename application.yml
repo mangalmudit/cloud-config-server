@@ -1,0 +1,18 @@
+eureka:
+   client:
+     registerWithEureka: true      # Disable registration with Eureka
+     fetchRegistry: true           # Disable fetching registry from Eureka
+     service-url:
+     defaultZone: http://localhost:8761/eureka/   # Eureka server URL\
+   instance:
+	   hostname: localhost
+microservice:
+	payment-service:
+		endpoints:
+			endpoint:
+				url:http://PAYMENT-SERVICE/payment/doPayment
+								   
+	order-service:
+		endpoints:
+			endpoint:
+				url:http://ORDER-SERVICE/order/bookOrder
